@@ -70,10 +70,8 @@
     <script src="script.js" charset="utf-8"></script>
 
     <script>
-      // Check for the token on page load
       window.onload = function () {
         if (!getCookie("auth_token")) {
-          // Redirect the user to welcome.html
           window.location.href = "login.html";
         }
       };

@@ -33,7 +33,7 @@
       // Check for the token on page load
       window.onload = function () {
         if (getCookie("auth_token")) {
-          // Redirect the user to welcome.html
+          // Redirect the user to index.html
           window.location.href = "website.html";
         }
       };
@@ -65,7 +65,7 @@
 
             // Check if the token exists
             if (getCookie("auth_token")) {
-              // Redirect the user to welcome.html
+              // Redirect the user to index.html
               window.location.href = "attendance.html";
             }
 
