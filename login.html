@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PIMSWEBSITE</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section class="logins">
+      <div class="login-box">
+        <form onsubmit="event.preventDefault(); login();">
+          <h2 class="log">Login</h2>
+          <div class="input-box">
+            <input type="text" id="username" name="username" required />
+            <label>Type username</label>
+          </div>
+          <div class="input-box">
+            <input type="password" id="lrn" name="lrn" required />
+            <label>Type Password</label>
+          </div>
+
+          <button class="LRbtn" type="submit">Login</button>
+        </form>
+      </div>
+    </section>
+
+    <script>
+      // Check for the token on page load
+      window.onload = function () {
+        if (getCookie("auth_token")) {
+          // Redirect the user to welcome.html
+          window.location.href = "website.html";
+        }
+      };
+
+      function login() {
+        const username = document.getElementById("username").value;
+        const lrn = document.getElementById("lrn").value;
+
+        // Construct the request payload
+        const data = {
+          username: username,
+          lrn: lrn,
+        };
+
+        // Make a POST request to the login API endpoint
+        fetch("https://appapiendpoint.onrender.com/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Login successful:", data);
+
+            // Save the token to a cookie named 'auth_token'
+            document.cookie = `auth_token=${data.token}; path=/`;
+
+            // Check if the token exists
+            if (getCookie("auth_token")) {
+              // Redirect the user to welcome.html
+              window.location.href = "website.html";
+            }
+
+            // You can perform additional actions after successful login here
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+
+      function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(";").shift();
+      }
+    </script>
+
+    <!--    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+ -->
+
+    <script src="app.js"></script>
+  </body>
+</html>

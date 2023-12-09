@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PIMSWEBSITE</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="scrollToTop-btn">
+      <i class="fas fa-angle-up"></i>
+    </div>
+
+    <header>
+      <a href="#" class="brand">PIMS</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <a href="website.html">Home</a>
+        <a href="website.html">About</a>
+        <a href="website.html">developers</a>
+        <a href="website.html">Contact</a>
+        <a onclick="logout()">logout</a>
+      </div>
+    </header>
+
+    <section class="main" id="main">
+      <div class="content">
+        <input
+          type="text"
+          id="searchInput"
+          onkeyup="searchTable()"
+          placeholder="Search for names..."
+        />
+
+        <table id="myTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>City</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td>
+              <td>25</td>
+              <td>New York</td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>30</td>
+              <td>Los Angeles</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="footer-title"
+        >PERSONAL IDENTIFICATION MANAGEMENT SYSTEM</span
+      >
+      <p>support us <a href="#">PIMS to KVSHS</a>. Thank you!</p>
+    </footer>
+
+    <script src="script.js" charset="utf-8"></script>
+
+    <script>
+      // Check for the token on page load
+      window.onload = function () {
+        if (!getCookie("auth_token")) {
+          // Redirect the user to welcome.html
+          window.location.href = "login.html";
+        }
+      };
+
+      function logout() {
+        // Clear the auth_token cookie
+        document.cookie =
+          "auth_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        window.location.href = "login.html";
+      }
+
+      function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(";").shift();
+      }
+      function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(";").shift();
+      }
+    </script>
+  </body>
+</html>

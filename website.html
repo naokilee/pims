@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIMSWEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  </head>
+  <body>
+
+    <div class="scrollToTop-btn">
+      <i class="fas fa-angle-up"></i>
+    </div>
+
+    <header>
+      <a href="#" class="brand">PIMS</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <a href="#main">Home</a>
+        <a href="#about">About</a>
+        <a href="#developers">developers</a>
+        <a href="#contact">Contact</a>
+        <a onclick="logout()" >logout</a>
+      </div>
+    </header>
+    
+
+    <section class="main" id="main">
+      <div class="content">
+        <h2>Hello!<br><span>Welcome to</span></h2>
+        <div class="animated-text">
+          <h3>Personal</h3>
+          <h3>IDentification</h3>
+          <h3>Management System</h3>
+        </div>
+        <a href="attendance.html" class="btn">ATTENDANCE</a>
+        <div class="media-icons">
+          <a href="https://www.facebook.com/pages/Kasiglahan-Village-Senior-High-School/1750598855201548"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/explore/locations/1750598855201548/kasiglahan-village-senior-high-school/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@kasiglahenyosreport1434"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="con__body">
+        <div class="container">
+        <div class="clock">
+        <span id="hrs">00</span>
+        <span>:</span>
+        <span id="min">00</span>
+        <span>:</span>
+        <span id="sec">00</span>
+        </div>
+        </div>
+        
+        <script>
+        let hrs = document.getElementById("hrs");
+        let min = document.getElementById("min");
+        let sec= document.getElementById("sec");
+        
+        setInterval(()=>{
+            let currentTime = new Date();
+        
+        hrs.innerHTML =(currentTime.getHours()<10?"0":"") + currentTime.getHours();
+        min.innerHTML =(currentTime.getMinutes()<10?"0":"") + currentTime.getMinutes();
+        sec.innerHTML =(currentTime.getSeconds()<10?"0":"") + currentTime.getSeconds();
+        },1000)
+            
+        </script>
+        <script src="app.js"></script>
+    </section>
+
+    <section class="about" id="about">
+      <div class="title reveal">
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="content">
+        <div class="column col-left reveal">
+          <div class="img-card">
+            <img src="12.jpg" alt="">
+          </div>
+        </div>
+        <div class="column col-right reveal">
+          <h2 class="content-title">Hey There! this is Personal IDentification Management System</h2>
+          <p class="paragraph-text">Description: <br>
+            Technology is all around us and keeps changing our lives. </p>
+          <a href="about.html" class="btn">See More</a>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="developers" id="developers">
+      <div class="title reveal">
+        <h2 class="section-title">DEVELOPERS</h2>
+      </div>
+      <div class="content">
+        <div class="card reveal">
+          <div class="card-img">
+            <img src="lee.jpeg" alt="">
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-img">
+            <img src="tel.jpg" alt="">
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-img">
+            <img src="logo.jpg" alt="">
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-img">
+            <img src="cleeve.jpeg" alt="">
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-img">
+            <img src="jay.jpeg" alt="">
+          </div>
+        </div>
+        <div class="title reveal">
+          <a href="developers.html" class="btn">See All</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="title reveal">
+        <h2 class="section-title">Contact Me</h2>
+      </div>
+      <div class="content">
+        <div class="row">
+          <div class="card reveal">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info">
+              <h3>Address</h3>
+              <span>Kasiglahan Village Senior High School</span>
+            </div>
+          </div>
+          <div class="card reveal">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="info">
+              <h3>Phone</h3>
+              <span>+09 8765 4321</span>
+            </div>
+          </div>
+          <div class="card reveal">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info">
+              <h3>Email Address</h3>
+              <span>Kasiglahan@email.com</span>
+            </div>
+          </div>
+          <div class="card reveal">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="info">
+              <h3>Day</h3>
+              <span>Mon - sat 8:00 AM to 8:00 PM</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="contact-form reveal">
+            <h3>Send Message</h3>
+            <div class="input-box">
+              <input type="text" name="" value="" placeholder="Name">
+            </div>
+            <div class="input-box">
+              <input type="text" name="" value="" placeholder="Email">
+            </div>
+            <div class="input-box">
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="input-box">
+              <input type="submit" class="send-btn" name="" value="Send"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="footer-title">PERSONAL IDENTIFICATION MANAGEMENT SYSTEM</span>
+      <p>support us <a href="#">PIMS to KVSHS</a>. Thank you!</p>
+    </footer>
+
+    <script src="script.js" charset="utf-8"></script>
+
+      <script>
+      // Check for the token on page load
+      window.onload = function () {
+        if (!getCookie("auth_token")) {
+          // Redirect the user to welcome.html
+          window.location.href = "login.html";
+        }
+      };
+
+      function logout() {
+          // Clear the auth_token cookie
+          document.cookie = 'auth_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+          window.location.href = 'login.html';
+        }
+
+        function getCookie(name) {
+          const value = `; ${document.cookie}`;
+          const parts = value.split(`; ${name}=`);
+          if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+      function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(";").shift();
+      }
+    </script>
+  </body>
+</html>
+      
