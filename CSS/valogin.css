@@ -8,7 +8,7 @@
 body{
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(to bottom, rgb(131, 190, 190), rgb(187, 228, 226)), url(PHOTO/sbg.jpg);
+    background-image: linear-gradient(to bottom, rgb(131, 190, 190), rgb(187, 228, 226)), url('PHOTO/shsbg.jpg');
 }
 h1{
     background: #f2f7a1;
@@ -49,4 +49,22 @@ img{
     border-radius: 10px;
     color: #fff;
     margin: 46px 0 0 1390px;
+}
+
+table{
+    width: 100%;
+    margin-top: 8rem;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+table, th,td{
+    border: 1px solid #222222;
+}
+
+th{
+    padding: 0.5rem;
+    background-color: #222222;
+    color: teal;
+    letter-spacing:0.5rem;
 }

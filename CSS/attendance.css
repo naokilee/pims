@@ -8,7 +8,7 @@
 body{
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(to bottom, rgb(131, 190, 190), rgb(187, 228, 226)), url(PHOTO/sbg.jpg);
+    background-image: linear-gradient(to bottom, rgb(131, 190, 190), rgb(187, 228, 226)), url('PHOTO/shsbg.jpg');
 }
 h1{
     background: #f2f7a1;

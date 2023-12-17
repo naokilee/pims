@@ -12,15 +12,73 @@
         <div class="logo">
             <img src="PHOTO/logo_kvshs.png">
             <div class="nav">
-                <a href="index.html">HOME</a>
+                <a href="index.html">HOME</aF>
                 <a href="aboutus.html">ABOUT US</a>
                 <a href="developers.html">DEVELOPERS</a>
                 <a href="attendance.html">VIEW ATTENDANCE</a>
                 <a href="contactus.html">CONTACT US</a>
             </div>
         </div>
-        <a href="attendance.html">
-        <button class="login">LOGOUT</button>
-        </a>
+    
+            <button class="login" onclick="logout()">LOGOUT</button>
+
+        <table id="attendanceTable">
+            <thead>
+                <tr>
+                    <th>LRN</th>
+                    <th>NAME</th>
+                    <th>TIME IN</th>
+                    <th>TIME OUT</th>
+                    <th>DATE</th>
+                </tr>
+            </thead>
+           
+            <tbody></tbody>
+           
+        
+        </table>
+       
+        <script>
+            fetch('https://appapiendpoint.onrender.com/attendance')
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.getElementById('attendanceTable').getElementsByTagName('tbody')[0];
+    
+                    data.forEach(entry => {
+                        const row = tableBody.insertRow();
+        
+                        row.insertCell(0).textContent = entry.username;
+                        row.insertCell(1).textContent = entry.lrn;
+                        row.insertCell(2).textContent = entry.timein;
+                        row.insertCell(3).textContent = entry.timeout;
+                        row.insertCell(4).textContent = entry.date;
+                    });
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        </script>
+        
+        <script>
+            window.onload = function () {
+              if (!getCookie("auth_token")) {
+                window.location.href = "attendance.html";
+              }
+            };
+      
+            function logout() {
+                document.cookie = 'auth_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+                window.location.href = 'attendance.html';
+              }
+      
+              function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+              }
+            function getCookie(name) {
+              const value = `; ${document.cookie}`;
+              const parts = value.split(`; ${name}=`);
+              if (parts.length === 2) return parts.pop().split(";").shift();
+            }
+          </script>
 </body> 
 </html>

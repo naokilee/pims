@@ -21,15 +21,68 @@
         </div>
 
         <div class="login">
-            <form action="VAlogin.html">
-            <h2>K<span class="v">V</span><span class="s">S</span><span class="h">H</span><span class="s1">S</span></h2>
-                <input type="email" class="email" placeholder="Email" required>
-                    <input type="text" placeholder="LRN" required>
-                            <button>LOGIN</button>
-                                </form>
-                                    </a>
-                                        </div>
+            <form  onsubmit="event.preventDefault(); login();">
+                     <h2>K<span class="v">V</span><span class="s">S</span><span class="h">H</span><span class="s1">S</span></h2>
+                    <input id="username" name="username" type="email" class="email" placeholder="Email" required/>
+                    <input id="lrn" name="lrn" type="text" placeholder="LRN" required />
+                    <button type="submit">LOGIN</button>
+            </form>
+                
+        </div>
 
+
+        <script>
+            window.onload = function () {
+              if (getCookie("auth_token")) {
+                window.location.href = "VAlogin.html";
+              }
+            };
+            function login() {
+                const username = document.getElementById("username").value;
+                const lrn = document.getElementById("lrn").value;
+
+                const data = {
+                username: username,
+                lrn: lrn,
+                };
+
+                fetch("https://appapiendpoint.onrender.com/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+                })
+                .then((response) => {
+                    if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then((data) => {
+                    console.log("Login successful:", data);
+                    document.cookie = `auth_token=${data.token}; path=/`;
+
+                    if (getCookie("auth_token")) {
+                    window.location.href = "VAlogin.html";
+                    }
+                })
+                .catch((error) => {
+                    // Handle errors, including HTTP errors (e.g., 401 Unauthorized)
+                    console.error("Error:", error);
+                    window.alert('invalid username and password');
+                });
+                }
+
+                    
+            function getCookie(name) {
+
+              const value = `; ${document.cookie}`;
+              const parts = value.split(`; ${name}=`);
+              if (parts.length === 2) return parts.pop().split(";").shift();
+            }
+          </script>
+      
 
 </body>
 </html>
