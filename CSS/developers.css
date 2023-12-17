@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-emphasis: none;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgb(131, 190, 190), rgb(187, 228, 226)), url(/PHOTO/sbg.jpg);
+}
+h1{
+    background: #f2f7a1;
+    font-size: 110px;
+    padding: 30px 0 0 125px;
+    margin: -5px 0 0 -60px;
+    height: 180px;
+    color: #071952;
+}
+a{
+    padding: 6px 0;
+    margin-top: -70px;
+    color: #062ba1;
+    font-weight: 600;
+}
+a:hover{
+    color: #1a3dad;
+}
+.logo{
+    margin: -140px 0 0 460px;
+}
+img{
+    width: 10%;
+}
+.nav{
+    justify-content: space-between;
+    display: flex;
+    margin: 0 100px 0 300px;
+    font-size: 16px;
+    color: #071952; 
+}
+
+/*LEE CARD */
+.card{
+    border: 2px solid #071952;
+    border-radius: 16px;
+    background: #F2F7A1;
+    height: 390px;
+    width: 24%;
+    margin: 170px 0 0 -400px;
+}
+.image{
+    padding: 30px 0 0 42px;
+}
+img{
+    border-radius: 90px;
+}
+/* END */
+
+/*JAVE CARD */
+.card1{
+    border: 2px solid #071952;
+    border-radius: 16px;
+    background: #F2F7A1;
+    height: 390px;
+    width: 24%;
+    margin: -390px 0 0 -100px;
+}
+.image1{
+    padding: 30px 0 0 42px;
+}
+img{
+    border-radius: 90px;
+}
+/* END */
+
+/*JAY CARD */
+.card2{
+    border: 2px solid #071952;
+    border-radius: 16px;
+    background: #F2F7A1;
+    height: 390px;
+    width: 24%;
+    margin: -390px 0 0 200px;
+}
+.image2{
+    padding: 30px 0 0 42px;
+}
+/* END */
+.card3{
+    border: 2px solid #071952;
+    border-radius: 16px;
+    background: #F2F7A1;
+    height: 390px;
+    width: 24%;
+    margin: -390px 0 0 500px;
+}
+.image3{
+    padding: 30px 0 0 42px;
+}
+.developer img{
+    width: 80%;
+    margin-left: 4px;
+}
+.card4{
+    border: 2px solid #071952;
+    border-radius: 16px;
+    background: #F2F7A1;
+    height: 390px;
+    width: 24%;
+    margin: -390px 0 0 800px;
+}
+.image4{
+    padding: 30px 0 0 42px;
+}
+.developer img{
+    width: 80%;
+    margin-left: 4px;
+}
+/* INFORMATION OF DEVELOPERS */
+h3{
+    font-size: 15px;
+    text-align: center;
+    margin: -90px 30px 0 0;
+    color: #062ba1;
+}
+p{
+    color: #062ba1;
+    margin: 8px 35px 0 0;
+    text-align: center;
+}
+.name{
+    font-size: 95%;
+    margin: 20px 5px 0 -29px;
+    color: #062ba1;
+}
+.lead{
+    color: #062ba1;
+    margin: 8px 35px 0 0;
+    text-align: center;
+}
+.name1{
+    font-size: 95%;
+    margin: 22px 5px 0 -29px;
+    color: #062ba1;
+}
+.lead1{
+    color: #062ba1;
+    margin: 8px 35px 0 0;
+    text-align: center;
+}
+.name2{
+    font-size: 95%;
+    margin: 22px 5px 0 -29px;
+    color: #062ba1;
+}
+.lead2{
+    color: #062ba1;
+    margin: 8px 35px 0 0;
+    text-align: center;
+}
+.name3{
+    font-size: 95%;
+    margin: 22px 5px 0 -29px;
+    color: #062ba1;
+}
+.lead3{
+    color: #062ba1;
+    margin: 8px 35px 0 0;
+    text-align: center;
+}
+/* END */
+
+/* FB & IG ICONS */
+.icon i{
+    cursor: pointer;
+    font-size: 30px;
+    margin: 80px 0 0 40px;
+    color: #071952;
+}
+.icon i:hover{
+    color: #1a3dad;
+}
+.icons{
+    margin: -65px 0 0 6px;
+}
+h4{
+    text-shadow: 1px 1px 1px;
+    color: #071952;
+    font-size: 40px;
+    margin-left: 220px;
+    margin-top: -480px;
+}
+
+

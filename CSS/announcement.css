@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-emphasis: none;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgb(131, 190, 190), rgb(187, 228, 226)), url(/PHOTO/sbg.jpg);
+}
+.container::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('/PHOTO/announcement.jpg');
+    height: 76.9%;
+    background-position-y: top;
+    background-position-x: 1709%;
+    margin-top: 175px;
+    width: 100%;
+    opacity: .5;
+    content: "";
+    z-index: -1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    background: #f2f7a1;
+    font-size: 110px;
+    padding: 30px 0 0 125px;
+    margin: -5px 0 0 -60px;
+    height: 180px;
+    color: #071952;
+}
+a{
+    padding: 6px 0;
+    margin-top: -70px;
+    color: #062ba1;
+    font-weight: 600;
+}
+a:hover{
+    color: #1a3dad;
+}
+.logo{
+    margin: -140px 0 0 460px;
+}
+img{
+    width: 10%;
+}
+.nav{
+    justify-content: space-between;
+    display: flex;
+    margin: 0 100px 0 300px;
+    font-size: 16px;
+    color: #071952; 
+}
+p{ 
+    border: 2px solid #071952;
+    color: #071952;
+    font-size: 20px;
+    text-align: center;
+    padding: 60px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 200px 0 0 420px;
+    height: 280px;
+    width: 50%;
+}
+h2{
+    font-weight: lighter;
+    margin-top: 120px;
+    margin-left: 680px;
+    font-size: 50px;
+    width: 30%;
+    height: 80px;
+    border-radius: 20px;
+    color:#062ba1;
+    float: left;
+}

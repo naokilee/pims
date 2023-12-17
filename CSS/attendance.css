@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-emphasis: none;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgb(131, 190, 190), rgb(187, 228, 226)), url(/PHOTO/sbg.jpg);
+}
+h1{
+    background: #f2f7a1;
+    font-size: 110px;
+    padding: 30px 0 0 125px;
+    margin: -5px 0 0 -60px;
+    height: 180px;
+    color: #071952;
+}
+a{
+    padding: 6px 0;
+    margin-top: -70px;
+    color: #062ba1;
+    font-weight: 600;
+}
+a:hover{
+    color: #1a3dad;
+}
+.logo{
+    margin: -140px 0 0 460px;
+}
+img{
+    width: 10%;
+}
+.nav{
+    justify-content: space-between;
+    display: flex;
+    margin: 0 100px 0 300px;
+    font-size: 16px;
+    color: #071952; 
+}
+.login{
+    background: #fff;
+    width: 22%;
+    height: 330px;
+    margin: 160px 0 0 650px;
+    border-radius: 14px;
+    border: 1px solid #071952;
+}
+input{
+    float: left;
+    padding-left: 10px;
+    display: block;
+    margin: 45px 0 0 49px;
+    height: 40px;
+    width: 70%;
+    border-radius: 7px;
+    border: 1px solid #071952;
+}
+h2{
+    font-size: 35px;
+    float: left;
+    padding-left: 121px;
+    color: #0081C9;
+    padding-top: 20px;
+    text-align: center;
+}
+.v{
+   color: #54B435 ;
+}
+.s{
+    color: #73A9AD;
+}
+.h{
+    color: #3B9AE1;
+}
+.s1{
+    color: #FFA732;
+}
+button{
+    background: #062ba1;
+    height: 40px;
+    width: 30%;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    float: left;
+    margin: 30px 0 0 120px;
+    cursor: pointer;
+}
